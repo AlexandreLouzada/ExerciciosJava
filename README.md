@@ -1,2 +1,2 @@
 # ExerciciosJava
- Exercícios simplem na linguagem Java
+ Exercícios simples na linguagem Java
