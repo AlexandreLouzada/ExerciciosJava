@@ -1,3 +1,8 @@
+/*
+ * 1.	Faça um programa utilizando listas que leia o nome e a altura de 
+ *      50 pessoas e ao final escreva o nome e a altura das pessoas com 
+ *      mais de 1,70 metros.
+ */
 package fase04.L04Exercicio01;
 
 import java.util.ArrayList;

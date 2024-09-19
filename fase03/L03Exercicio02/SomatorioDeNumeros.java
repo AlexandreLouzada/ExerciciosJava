@@ -1,3 +1,5 @@
+//Faça um programa que calcule e escreva no vídeo o somatório dos números inteiros de 1 até 50.
+
 package fase03.L03Exercicio02;
 
 public class SomatorioDeNumeros {

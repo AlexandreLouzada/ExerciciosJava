@@ -1,3 +1,5 @@
+//Faça um programa que leia o preço de 10 produtos. Ao final escreva o somatório dos preços.
+
 package fase03.L03Exercicio01;
 
 import java.util.Scanner;
