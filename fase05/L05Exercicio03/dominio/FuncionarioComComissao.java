@@ -5,6 +5,7 @@ public class FuncionarioComComissao extends Funcionario {
     private double taxaComissao; // Representada como decimal (ex: 0.10 para 10%)
 
     public FuncionarioComComissao(String nome, String departamento, double salarioBase, double totalVendas, double taxaComissao) {
+        
         super(nome, departamento, salarioBase);
         this.totalVendas = totalVendas;
         this.taxaComissao = taxaComissao;
