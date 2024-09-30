@@ -10,7 +10,7 @@ import fase05.L05Exercicio04.dominio.ContaPoupanca;
 public class Contas {
    public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        ContaBancaria conta = null;
+        //ContaBancaria conta = null;
 
         System.out.println("=== Sistema Bancário ===");
 
