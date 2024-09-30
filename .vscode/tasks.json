@@ -1,0 +1,22 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Compilar Java com Preview",
+            "type": "shell",
+            "command": "javac",
+            "args": [
+                "--enable-preview",
+                "-d",
+                "bin",
+                "${workspaceFolder}/src/**/*.java"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": ["$javac"],
+            "detail": "Compila todos os projetos Java no workspace com recursos experimentais habilitados."
+        }
+    ]
+}

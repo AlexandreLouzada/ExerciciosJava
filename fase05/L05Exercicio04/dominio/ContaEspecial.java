@@ -1,6 +1,6 @@
 package fase05.L05Exercicio04.dominio;
 
-class ContaEspecial extends ContaBancaria {
+public class ContaEspecial extends ContaBancaria {
     private float limite;
 
     public ContaEspecial(String cliente, int num_conta, float saldo, float limite) {

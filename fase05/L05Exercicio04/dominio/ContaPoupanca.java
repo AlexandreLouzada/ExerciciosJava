@@ -1,6 +1,6 @@
 package fase05.L05Exercicio04.dominio;
 
-class ContaPoupanca extends ContaBancaria {
+public class ContaPoupanca extends ContaBancaria {
     private int diaRendimento;
 
     public ContaPoupanca(String cliente, int num_conta, float saldo, int diaRendimento) {
