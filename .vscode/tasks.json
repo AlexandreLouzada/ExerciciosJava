@@ -15,7 +15,6 @@
                 "kind": "build",
                 "isDefault": true
             },
-            "problemMatcher": ["$javac"],
             "detail": "Compila todos os projetos Java no workspace com recursos experimentais habilitados."
         }
     ]
