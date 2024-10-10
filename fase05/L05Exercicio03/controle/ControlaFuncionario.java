@@ -11,7 +11,7 @@ import fase05.L05Exercicio03.dominio.FuncionarioPorHora;
 public class ControlaFuncionario {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        List<Funcionario> funcionarios = new ArrayList<>();
+        ArrayList<Funcionario> funcionarios = new ArrayList<>();
 
         System.out.println("Sistema de Gerenciamento de Funcionários");
         System.out.println("----------------------------------------");
