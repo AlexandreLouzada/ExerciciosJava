@@ -1,7 +1,6 @@
 package fase05.L05Exercicio03.controle;
 
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 import fase05.L05Exercicio03.dominio.Funcionario;
