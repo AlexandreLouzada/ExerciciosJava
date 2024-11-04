@@ -1,8 +1,9 @@
-package fase06.controle;
+package fase06.L06Exercicio01.controle;
 
-import fase06.dominio.Produto;
 import java.util.ArrayList;
 import java.util.Scanner;
+
+import fase06.L06Exercicio01.dominio.Produto;
 
 public class ControlaProduto {
     private ArrayList<Produto> produtos;
