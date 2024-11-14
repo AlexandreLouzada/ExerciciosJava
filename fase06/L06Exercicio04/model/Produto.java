@@ -37,10 +37,19 @@ public class Produto {
 
     public static Produto fromFileString(String line) {
         String[] data = line.split(";");
-        int id = Integer.parseInt(data[0]);
-        String nome = data[1];
-        double valor = Double.parseDouble(data[2]);
-        return new Produto(id, nome, valor);
+        if (data.length != 3) {
+            throw new IllegalArgumentException("Linha de dados inválida para criação de Produto: " + line);
+        }
+        
+        try {
+            int id = Integer.parseInt(data[0]);
+            String nome = data[1];
+            double valor = Double.parseDouble(data[2]);
+            return new Produto(id, nome, valor);
+        } catch (NumberFormatException e) {
+            throw new IllegalArgumentException("Formato numérico inválido em: " + line, e);
+        }
     }
+    
 }
 

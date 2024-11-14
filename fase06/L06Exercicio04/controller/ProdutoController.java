@@ -7,21 +7,21 @@ import java.util.ArrayList;
 
 public class ProdutoController {
     private ArrayList<Produto> produtos;
-    private final String arquivoProdutos = "produtos.txt";
+    private ProdutoRepository produtoRepository;
 
     public ProdutoController() {
-        this.produtos = new ArrayList<>();
-        carregarProdutos();
+        this.produtoRepository = new ProdutoRepository();
+        this.produtos = produtoRepository.carregarProdutos();
     }
 
     public ArrayList<Produto> listarProdutos() {
-        return produtos;
+        return new ArrayList<>(produtos); // Retorna uma cópia para proteção de dados
     }
 
     public void adicionarProduto(int id, String nome, double valor) {
         Produto produto = new Produto(id, nome, valor);
         produtos.add(produto);
-        salvarProdutos();
+        produtoRepository.salvarProdutos(produtos);
     }
 
     public boolean alterarProduto(int id, String novoNome, double novoValor) {
@@ -29,7 +29,7 @@ public class ProdutoController {
         if (produto != null) {
             produto.setNome(novoNome);
             produto.setValor(novoValor);
-            salvarProdutos();
+            produtoRepository.salvarProdutos(produtos);
             return true;
         }
         return false;
@@ -39,7 +39,7 @@ public class ProdutoController {
         Produto produto = buscarProdutoPorId(id);
         if (produto != null) {
             produtos.remove(produto);
-            salvarProdutos();
+            produtoRepository.salvarProdutos(produtos);
             return true;
         }
         return false;
@@ -53,29 +53,4 @@ public class ProdutoController {
         }
         return null;
     }
-
-    private void salvarProdutos() {
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter(arquivoProdutos))) {
-            for (Produto produto : produtos) {
-                writer.write(produto.toFileString());
-                writer.newLine();
-            }
-        } catch (IOException e) {
-            System.out.println("Erro ao salvar produtos: " + e.getMessage());
-        }
-    }
-
-    private void carregarProdutos() {
-        try (BufferedReader reader = new BufferedReader(new FileReader(arquivoProdutos))) {
-            String linha;
-            while ((linha = reader.readLine()) != null) {
-                produtos.add(Produto.fromFileString(linha));
-            }
-        } catch (FileNotFoundException e) {
-            System.out.println("Arquivo de produtos não encontrado. Será criado ao salvar novos produtos.");
-        } catch (IOException e) {
-            System.out.println("Erro ao carregar produtos: " + e.getMessage());
-        }
-    }
 }
-
