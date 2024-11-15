@@ -44,9 +44,8 @@ public class ControlaFiguraGeometrica {
         System.out.print("Informe o lado do quadrado: ");
         int lado = scanner.nextInt();
         
-        Quadrado quadrado = new Quadrado();
-        quadrado.setLado(lado);
-
+        Quadrado quadrado = new Quadrado(lado);
+       
         exibirInformacoesFigura(quadrado);
     }
 
@@ -66,13 +65,8 @@ public class ControlaFiguraGeometrica {
         System.out.print("Informe o lado C do triângulo: ");
         int ladoC = scanner.nextInt();
         
-        Triangulo triangulo = new Triangulo();
-        triangulo.setBase(base);
-        triangulo.setAltura(altura);
-        triangulo.setLadoA(ladoA);
-        triangulo.setLadoB(ladoB);
-        triangulo.setLadoC(ladoC);
-
+        Triangulo triangulo = new Triangulo(base,altura,ladoA,ladoB,ladoC);
+       
         exibirInformacoesFigura(triangulo);
     }
 

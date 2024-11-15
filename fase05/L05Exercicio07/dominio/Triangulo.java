@@ -8,6 +8,14 @@ public class Triangulo implements FiguraGeometrica {
     private int ladoB;
     private int ladoC;
 
+    public Triangulo(int base, int altura, int ladoA, int ladoB, int ladoC){
+        this.base = base;
+        this.altura = altura;
+        this.ladoA = ladoA;
+        this.ladoA = ladoB;
+        this.ladoA = ladoC;
+    }
+
     public int getAltura() {
         return altura;
     }
