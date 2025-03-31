@@ -17,7 +17,7 @@ public class PessoasComAlturaMaiorQue170 {
         ArrayList<Double> alturas = new ArrayList<>();
         
         // Entrada de dados para 50 pessoas
-        for (int i = 1; i <= 50; i++) {
+        for (int i = 1; i <= 4; i++) {
             System.out.print("Digite o nome da pessoa " + i + ": ");
             String nome = sc.next();
             nomes.add(nome);
