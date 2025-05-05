@@ -1,0 +1,36 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "build",
+      "type": "shell",
+      "command": "javac",
+      "args": [
+        "--module-path",
+        "lib/javafx-sdk-23/lib",
+        "--add-modules",
+        "javafx.controls,javafx.fxml",
+        "-d",
+        "out",
+        "src/Main.java",
+        "src/controller/HelloController.java"
+      ],
+      "problemMatcher": []
+    },
+    {
+      "label": "run",
+      "type": "shell",
+      "command": "java",
+      "args": [
+        "--module-path",
+        "lib/javafx-sdk-23/lib",
+        "--add-modules",
+        "javafx.controls,javafx.fxml",
+        "-cp",
+        "out",
+        "src.Main"
+      ],
+      "problemMatcher": []
+    }
+  ]
+}
