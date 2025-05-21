@@ -32,5 +32,6 @@ public class FaturamentoVendas {
         System.out.println("Faturamento com calculadoras: R$ " + df.format(faturamentoCalculadoras));
         System.out.println("Faturamento com canetas: R$ " + df.format(faturamentoCanetas));
         System.out.println("Faturamento total: R$ " + df.format(faturamentoTotal));
+        sc.close();
     }
 }

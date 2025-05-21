@@ -10,7 +10,8 @@ public class CompararNumeros {
         int num1 = sc.nextInt();
         System.out.print("Digite o segundo número: ");
         int num2 = sc.nextInt();
-
+        sc.close();
+        
         if (num1 > num2) {
             System.out.println("O maior número é: " + num1);
         } else if (num2 > num1) {

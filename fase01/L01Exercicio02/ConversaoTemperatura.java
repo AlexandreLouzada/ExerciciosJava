@@ -12,5 +12,6 @@ public class ConversaoTemperatura {
         double celsius = (5.0 / 9.0) * (fahrenheit - 32);
 
         System.out.println("A temperatura em Celsius é: " + celsius);
+        sc.close();
     }
 }

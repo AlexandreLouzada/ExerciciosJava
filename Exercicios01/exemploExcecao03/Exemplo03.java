@@ -13,5 +13,6 @@ public class Exemplo03 {
         } catch (InputMismatchException e) {
             System.out.println("Erro: você não digitou um número inteiro.");
         }
+        scanner.close();
     }
 }

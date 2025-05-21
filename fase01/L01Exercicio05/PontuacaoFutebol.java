@@ -21,5 +21,6 @@ public class PontuacaoFutebol {
         System.out.println("Equipe: " + nomeEquipe);
         System.out.println("Pontos ganhos: " + pontosGanhos);
         System.out.println("Pontos perdidos: " + pontosPerdidos);
+        sc.close();
     }
 }
