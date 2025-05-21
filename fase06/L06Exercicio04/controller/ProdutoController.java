@@ -6,6 +6,7 @@ import java.io.*;
 import java.util.ArrayList;
 
 // Classe responsável por gerenciar a lógica de negócios relacionada a produtos
+@SuppressWarnings("unused")
 public class ProdutoController {
     
     // Lista que armazena os objetos Produto em memória
