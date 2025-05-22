@@ -22,6 +22,7 @@ public class SalarioEmpregado {
             desconto = salarioBruto * 0.03;
         }
 
+        sc.close();
         double salarioLiquido = salarioBruto - desconto;
 
         System.out.println("Valor do desconto: R$ " + df.format(desconto));

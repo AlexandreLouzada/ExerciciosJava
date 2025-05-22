@@ -27,5 +27,6 @@ public class SalarioEmpregados {
         System.out.println("Valor do acréscimo do segundo empregado: R$ " + df.format(acrescimo2));
         System.out.println("Salário final do primeiro empregado: R$ " + df.format(salarioFinal1));
         System.out.println("Salário final do segundo empregado: R$ " + df.format(salarioFinal2));
+        sc.close();
     }
 }

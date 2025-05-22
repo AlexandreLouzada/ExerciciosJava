@@ -20,6 +20,7 @@ public class CalcularIdade {
         } else {
             System.out.println("É eleitor.");
         }
+        sc.close();
     }
 }
 

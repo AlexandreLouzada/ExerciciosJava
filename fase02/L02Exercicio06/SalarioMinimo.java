@@ -25,6 +25,7 @@ public class SalarioMinimo {
             desconto = salarioBruto * 0.08;
         }
 
+        sc.close();
         double salarioLiquido = salarioBruto - desconto;
 
         System.out.println("Valor do desconto: R$ " + df.format(desconto));

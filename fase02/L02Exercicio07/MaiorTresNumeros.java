@@ -20,7 +20,7 @@ public class MaiorTresNumeros {
         if (num3 > maior) {
             maior = num3;
         }
-
+        sc.close();
         System.out.println("O maior número é: " + maior);
     }
 }

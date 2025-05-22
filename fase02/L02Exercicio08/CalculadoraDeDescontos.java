@@ -17,6 +17,7 @@ public class CalculadoraDeDescontos {
         double precoUnitario = sc.nextDouble();
         System.out.print("Escolha a forma de pagamento (1 - Dinheiro, 2 - Pix, 3 - Cartão débito, 4 - Cartão crédito): ");
         int formaPagamento = sc.nextInt();
+        sc.close();
 
         // Calculando o valor total
         double valorTotal = quantidade * precoUnitario;
@@ -50,6 +51,5 @@ public class CalculadoraDeDescontos {
         System.out.println("Desconto: R$ " + df.format(valorDesconto));
         System.out.println("Valor final a pagar: R$ " + df.format(valorFinal));
 
-        sc.close();
-    }
+         }
 }

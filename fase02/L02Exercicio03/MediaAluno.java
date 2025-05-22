@@ -12,6 +12,7 @@ public class MediaAluno {
         double nota1 = sc.nextDouble();
         System.out.print("Digite a segunda nota: ");
         double nota2 = sc.nextDouble();
+        sc.close();
 
         double media = (nota1 + nota2) / 2;
 

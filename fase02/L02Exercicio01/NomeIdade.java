@@ -16,6 +16,7 @@ public class NomeIdade {
         } else {
             System.out.println(nome + " é maior.");
         }
+        sc.close();
     }
 }
 

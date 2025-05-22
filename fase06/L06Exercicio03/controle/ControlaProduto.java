@@ -40,6 +40,7 @@ public class ControlaProduto {
             String novoNome = scanner.nextLine();
             System.out.print("Novo valor do produto: ");
             double novoValor = scanner.nextDouble();
+            scanner.close();
             
             produto.setNome(novoNome);
             produto.setValor(novoValor);
