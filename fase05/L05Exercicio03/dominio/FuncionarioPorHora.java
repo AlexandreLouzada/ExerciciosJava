@@ -18,12 +18,12 @@ public class FuncionarioPorHora extends Funcionario {
         return valorPorHora;
     }
 
-    @Override
+  //  @Override
     public double calcularSalario() {
         return salarioBase + (horasTrabalhadas * valorPorHora);
     }
 
-    @Override
+   // @Override
     public void mostrarInfo() {
         super.mostrarInfo();
         System.out.println("Horas Trabalhadas: " + horasTrabalhadas);
