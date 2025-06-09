@@ -35,7 +35,7 @@ public class MenuView {
                 case 5 -> listar();
                 case 6 -> {
                     controller.salvar();
-                    System.out.println("✅ Dados salvos. Encerrando...");
+                    System.out.println("Dados salvos. Encerrando...");
                 }
                 default -> System.out.println("Opção inválida!");
             }
@@ -43,41 +43,51 @@ public class MenuView {
     }
 
     private void incluir() {
-        System.out.println("🔹 Inclusão de Automóvel");
+        System.out.println("Inclusão de Automóvel");
         Automovel a = lerAutomovel();
-        if (controller.incluir(a)) System.out.println("✅ Inserido com sucesso.");
-        else System.out.println("❌ Placa já existente.");
+        if (controller.incluir(a))
+            System.out.println("✅ Inserido com sucesso.");
+        else
+            System.out.println("Placa já existente.");
     }
 
     private void excluir() {
-        System.out.print("🔹 Placa para excluir: ");
+        System.out.print("Placa para excluir: ");
         String placa = sc.nextLine();
-        if (controller.excluir(placa)) System.out.println("✅ Removido.");
-        else System.out.println("❌ Não encontrado.");
+        if (controller.excluir(placa))
+            System.out.println("✅ Removido.");
+        else
+            System.out.println("Não encontrado.");
     }
 
     private void alterar() {
-        System.out.print("🔹 Placa para alterar: ");
+        System.out.print("Placa para alterar: ");
         String placa = sc.nextLine();
         Automovel novo = lerAutomovelSemPlaca();
-        if (controller.alterar(placa, novo)) System.out.println("✅ Alterado.");
-        else System.out.println("❌ Placa não encontrada.");
+        if (controller.alterar(placa, novo))
+            System.out.println("✅ Alterado.");
+        else
+            System.out.println("Placa não encontrada.");
     }
 
     private void consultar() {
-        System.out.print("🔹 Placa para consultar: ");
+        System.out.print("Placa para consultar: ");
         String placa = sc.nextLine();
         Automovel a = controller.consultar(placa);
-        if (a != null) System.out.println("🔍 " + a);
-        else System.out.println("❌ Placa não encontrada.");
+        if (a != null)
+            System.out.println("🔍 " + a);
+        else
+            System.out.println("Placa não encontrada.");
     }
 
     private void listar() {
-        System.out.print("🔹 Ordenar por (placa/modelo/marca): ");
+        System.out.print("Ordenar por (placa/modelo/marca): ");
         String criterio = sc.nextLine();
         List<Automovel> lista = controller.listarOrdenado(criterio);
-        if (lista.isEmpty()) System.out.println("📭 Nenhum automóvel encontrado.");
-        else lista.forEach(System.out::println);
+        if (lista.isEmpty())
+            System.out.println("📭 Nenhum automóvel encontrado.");
+        else
+            lista.forEach(System.out::println);
     }
 
     private Automovel lerAutomovel() {
@@ -112,4 +122,3 @@ public class MenuView {
         return v;
     }
 }
-

@@ -51,15 +51,31 @@ public class Automovel {
         this.valor = valor;
     }
 
+    //Sobrescrever o método toString() da classe Object para 
+    //fornecer uma representação legível e formatada do objeto Automovel.
+
     @Override
     public String toString() {
         return String.format("Placa: %s | Modelo: %s | Marca: %s | Ano: %d | Valor: %.2f",
                 placa, modelo, marca, ano, valor);
     }
 
+    /*
+    Converter os dados do objeto Automovel em uma linha formatada no padrão CSV 
+    (Comma Separated Values), ideal para persistência em arquivos texto.
+    Usa String.join() para unir os atributos separados por vírgulas.
+    Converte ano e valor para String com String.valueOf().
+    */
+
     public String toCSV() {
         return String.join(",", placa, modelo, marca, String.valueOf(ano), String.valueOf(valor));
     }
+
+    /*Reconstrói um objeto Automovel a partir de uma linha de texto CSV, lida de um arquivo.
+    Usa split(",") para quebrar a string em partes.
+    Converte os dados do array para os tipos corretos (int, double).
+    Retorna um novo objeto Automovel com os dados extraídos da linha.
+    */
 
     public static Automovel fromCSV(String linha) {
         String[] dados = linha.split(",");
