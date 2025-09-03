@@ -11,5 +11,6 @@ public class Soma {
         int b = sc.nextInt();
         int soma = a + b;
         System.out.println("Soma: " + soma);
+        sc.close();
     }
 }

@@ -15,5 +15,6 @@ public class DistanciaPontos {
         double y2 = sc.nextDouble();
         double distancia = Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
         System.out.println("Distância: " + distancia);
+        sc.close();
     }
 }
