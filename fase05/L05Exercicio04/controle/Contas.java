@@ -2,10 +2,11 @@ package fase05.L05Exercicio04.controle;
 
 import java.util.Scanner;
 
-import fase05.L05Exercicio04.dominio.ContaBancaria;
-import fase05.L05Exercicio04.dominio.ContaEspecial;
-import fase05.L05Exercicio04.dominio.ContaPoupanca;
+//import fase05.L05Exercicio04.dominio.ContaBancaria;
+//import fase05.L05Exercicio04.dominio.ContaEspecial;
+//import fase05.L05Exercicio04.dominio.ContaPoupanca;
 
+import fase05.L05Exercicio04.dominio.*;
 
 public class Contas {
    public static void main(String[] args) {

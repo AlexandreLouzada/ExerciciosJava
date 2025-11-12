@@ -36,7 +36,7 @@ public abstract class ContaBancaria {
         this.saldo = saldo;
     }
 
-    // Métodos abstratos
+    // Método abstrato
     public abstract void sacar(float valor);
 
     public void depositar(float valor) {
