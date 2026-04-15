@@ -33,7 +33,7 @@ public class ControlaClube {
         System.out.println("Total de jogos: " + clube.totalDeJogos());
         System.out.println("Pontos ganhos: " + clube.pontosGanhos());
         System.out.println("Pontos perdidos: " + clube.pontosPerdidos());
-        System.out.printf("Aproveitamento: %.2f%%\n", clube.aproveitamento());
+        System.out.printf("Aproveitamento: %.2f% %\n", clube.aproveitamento());
 
         sc.close();
     }
