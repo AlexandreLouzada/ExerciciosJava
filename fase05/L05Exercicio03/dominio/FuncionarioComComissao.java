@@ -11,12 +11,20 @@ public class FuncionarioComComissao extends Funcionario {
         this.taxaComissao = taxaComissao;
     }
 
-    public double getTotalVendas() {
+     public double getTotalVendas() {
         return totalVendas;
     }
 
-    public double getTaxaComissao() {
+    public void setTotalVendas(double totalVendas) {
+        this.totalVendas = totalVendas;
+    }
+
+     public double getTaxaComissao() {
         return taxaComissao;
+    }
+    
+    public void setTaxaComissao(double taxaComissao) {
+        this.taxaComissao = taxaComissao;
     }
 
     @Override
