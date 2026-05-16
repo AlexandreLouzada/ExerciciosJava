@@ -2,4 +2,5 @@
 101;Teclado;300.0
 102;Impressora;3000.0
 123;Mouse;100.0
-124;Monitor;2000.0
+124;Monitor Gamer;5000.0
+190;impressora 3d;1000.0
