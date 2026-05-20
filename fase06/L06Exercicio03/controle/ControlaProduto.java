@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class ControlaProduto {
+
     private ArrayList<Produto> produtos;
     private final String arquivoProdutos = "produtos.txt";
 
@@ -25,25 +26,27 @@ public class ControlaProduto {
         if (produtos.isEmpty()) {
             System.out.println("Nenhum produto cadastrado.");
         } else {
-            System.out.println("Lista de Produtos:");
+            System.out.println("\nLista de Produtos:");
             for (Produto produto : produtos) {
                 produto.listarProduto();
             }
         }
     }
 
-    public void alterarProduto(int id) {
+    public void alterarProduto(int id, Scanner scanner) {
         Produto produto = buscarProdutoPorId(id);
+
         if (produto != null) {
-            Scanner scanner = new Scanner(System.in);
             System.out.print("Novo nome do produto: ");
             String novoNome = scanner.nextLine();
+
             System.out.print("Novo valor do produto: ");
             double novoValor = scanner.nextDouble();
-            scanner.close();
-            
+            scanner.nextLine();
+
             produto.setNome(novoNome);
             produto.setValor(novoValor);
+
             salvarProdutos();
             System.out.println("Produto alterado com sucesso!");
         } else {
@@ -53,6 +56,7 @@ public class ControlaProduto {
 
     public void excluirProduto(int id) {
         Produto produto = buscarProdutoPorId(id);
+
         if (produto != null) {
             produtos.remove(produto);
             salvarProdutos();
@@ -71,7 +75,6 @@ public class ControlaProduto {
         return null;
     }
 
-    // Método para salvar produtos no arquivo
     private void salvarProdutos() {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(arquivoProdutos))) {
             for (Produto produto : produtos) {
@@ -83,17 +86,20 @@ public class ControlaProduto {
         }
     }
 
-    // Método para carregar produtos do arquivo
     private void carregarProdutos() {
         try (BufferedReader reader = new BufferedReader(new FileReader(arquivoProdutos))) {
             String linha;
+
             while ((linha = reader.readLine()) != null) {
                 String[] dados = linha.split(";");
+
                 int id = Integer.parseInt(dados[0]);
                 String nome = dados[1];
                 double valor = Double.parseDouble(dados[2]);
+
                 produtos.add(new Produto(id, nome, valor));
             }
+
         } catch (FileNotFoundException e) {
             System.out.println("Arquivo de produtos não encontrado. Será criado ao salvar novos produtos.");
         } catch (IOException e) {
@@ -114,39 +120,54 @@ public class ControlaProduto {
             System.out.println("4. Excluir Produto");
             System.out.println("0. Sair");
             System.out.print("Escolha uma opção: ");
+
             opcao = scanner.nextInt();
+            scanner.nextLine();
 
             switch (opcao) {
                 case 1:
                     System.out.print("ID do Produto: ");
                     int id = scanner.nextInt();
-                    scanner.nextLine(); // Limpa o buffer do scanner
+                    scanner.nextLine();
+
                     System.out.print("Nome do Produto: ");
                     String nome = scanner.nextLine();
+
                     System.out.print("Valor do Produto: ");
                     double valor = scanner.nextDouble();
+                    scanner.nextLine();
+
                     controle.adicionarProduto(id, nome, valor);
                     break;
+
                 case 2:
                     controle.listarProdutos();
                     break;
+
                 case 3:
                     System.out.print("ID do Produto a alterar: ");
                     int idAlterar = scanner.nextInt();
-                    scanner.nextLine(); // Limpa o buffer
-                    controle.alterarProduto(idAlterar);
+                    scanner.nextLine();
+
+                    controle.alterarProduto(idAlterar, scanner);
                     break;
+
                 case 4:
                     System.out.print("ID do Produto a excluir: ");
                     int idExcluir = scanner.nextInt();
+                    scanner.nextLine();
+
                     controle.excluirProduto(idExcluir);
                     break;
+
                 case 0:
                     System.out.println("Encerrando o programa.");
                     break;
+
                 default:
                     System.out.println("Opção inválida. Tente novamente.");
             }
+
         } while (opcao != 0);
 
         scanner.close();
