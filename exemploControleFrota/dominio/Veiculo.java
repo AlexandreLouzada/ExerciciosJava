@@ -1,4 +1,4 @@
-package exemploCrontroleFrota.dominio;
+package exemploControleFrota.dominio;
 
 // Classe Abstrata Base
 public abstract class Veiculo {

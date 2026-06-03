@@ -1,5 +1,5 @@
-package exemploCrontroleFrota.controle;
-import exemploCrontroleFrota.dominio.*;
+package exemploControleFrota.controle;
+import exemploControleFrota.dominio.*;
 
 public class ControlaFrotaVeiculos {
 public static void main(String[] args) {

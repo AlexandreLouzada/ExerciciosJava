@@ -1,4 +1,4 @@
-package exemploCrontroleFrota.dominio;
+package exemploControleFrota.dominio;
 
 // Classe Carro
 public class Carro extends Veiculo implements Tributavel {

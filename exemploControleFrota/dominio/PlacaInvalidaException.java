@@ -1,4 +1,4 @@
-package exemploCrontroleFrota.dominio;
+package exemploControleFrota.dominio;
 
 // Herdar de RuntimeException torna a exceção Não-Verificada (Unchecked)
 public class PlacaInvalidaException extends RuntimeException {

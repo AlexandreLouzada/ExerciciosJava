@@ -1,4 +1,4 @@
-package exemploCrontroleFrota.dominio;
+package exemploControleFrota.dominio;
 
 public interface Tributavel {
     double calcularIPVA();

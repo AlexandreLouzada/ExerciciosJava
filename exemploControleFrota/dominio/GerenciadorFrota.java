@@ -1,4 +1,4 @@
-package exemploCrontroleFrota.dominio;
+package exemploControleFrota.dominio;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
