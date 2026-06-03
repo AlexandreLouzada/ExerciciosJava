@@ -1,0 +1,30 @@
+@startuml
+left to right direction
+skinparam packageStyle rectangle
+
+actor "Gestor de Frota" as Gestor
+
+rectangle "Sistema de Gestão de Frota (MVC)" {
+    usecase "UC01: Cadastrar Veículo" as UC_Cadastrar
+    usecase "Cadastrar Carro" as UC_Carro
+    usecase "Cadastrar Caminhão" as UC_Caminhao
+    usecase "UC02: Consultar Relatório da Frota" as UC_Relatorio
+    usecase "UC03: Salvar Dados (Disco)" as UC_Salvar
+    usecase "UC04: Carregar Dados (Disco)" as UC_Carregar
+    usecase "Tratar Placa Inválida" as UC_Erro
+    
+    ' Especializações do cadastro
+    UC_Carro --|> UC_Cadastrar
+    UC_Caminhao --|> UC_Cadastrar
+    
+    ' Fluxo de exceção (Extensão)
+    UC_Erro .> UC_Cadastrar : <<extend>> \n(Se placa != 7 caracteres)
+}
+
+Gestor --> UC_Carro
+Gestor --> UC_Caminhao
+Gestor --> UC_Relatorio
+Gestor --> UC_Salvar
+Gestor --> UC_Carregar
+
+@enduml
