@@ -1,0 +1,2 @@
+Tipo: Carro | Placa: ABC1D23 | IPVA: R$ 1200,00 | Custo Total: R$ 30180,00
+Tipo: Caminhao | Placa: XYZ9K88 | IPVA: R$ 1350,00 | Custo Total: R$ 90225,00
