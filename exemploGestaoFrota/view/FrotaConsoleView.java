@@ -82,7 +82,7 @@ public class FrotaConsoleView {
         System.out.println("Carro registrado com sucesso no controlador!");
     }
 
-    private void ejecutarCadastroCaminhao() {
+    private void executarCadastroCaminhao() {
         System.out.print("Digite a placa (7 caracteres): ");
         String placa = scanner.nextLine();
         System.out.print("Custo Fixo de Manutencao: ");
