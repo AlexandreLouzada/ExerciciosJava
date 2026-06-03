@@ -15,7 +15,7 @@ public class FrotaConsoleView {
 
     public FrotaConsoleView() {
         this.controller = new FrotaController();
-        this.scanner = new Scanner(System.getScanner());
+        this.scanner = new Scanner(System.in);
     }
 
     public void iniciarSistema() {
